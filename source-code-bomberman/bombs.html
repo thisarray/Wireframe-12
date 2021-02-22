@@ -22,12 +22,12 @@ body {
 
 <body>
 <section id="imageLoader" class="hidden">
-  <img class="hidden" src="images/bomb.png" alt="bomb">
-  <img class="hidden" src="images/brick.png" alt="brick">
-  <img class="hidden" src="images/explosion.png" alt="explosion">
-  <img class="hidden" src="images/ground.png" alt="ground">
-  <img class="hidden" src="images/player.png" alt="player">
-  <img class="hidden" src="images/wall.png" alt="wall">
+  <img class="hidden" src="images/bomb.png" alt="bomb" data-name="bomb">
+  <img class="hidden" src="images/brick.png" alt="brick" data-name="brick">
+  <img class="hidden" src="images/explosion.png" alt="explosion" data-name="explosion">
+  <img class="hidden" src="images/ground.png" alt="ground" data-name="ground">
+  <img class="hidden" src="images/player.png" alt="player" data-name="player">
+  <img class="hidden" src="images/wall.png" alt="wall" data-name="wall">
 </section>
 
 <main>
@@ -167,21 +167,21 @@ def draw():
 
 <script>
 // set game and screen sizes
-SIZE = 9;
-WIDTH  = SIZE*45 - 5;
-HEIGHT = SIZE*45 - 5;
+const SIZE = 9;
+WIDTH = (SIZE * 45) - 5;
+HEIGHT = (SIZE * 45) - 5;
 
 // bomb range
-RANGE = 3;
+const RANGE = 3;
 
 // constants for tile types
-GROUND    = 0;
-WALL      = 1;
-BRICK     = 2;
-BOMB      = 3;
-EXPLOSION = 4;
+const GROUND    = 0;
+const WALL      = 1;
+const BRICK     = 2;
+const BOMB      = 3;
+const EXPLOSION = 4;
 // images for tile types
-TILES = ['ground', 'wall', 'brick', 'bomb', 'explosion'];
+const TILES = ['ground', 'wall', 'brick', 'bomb', 'explosion'];
 
 var player, tilemap;
 
